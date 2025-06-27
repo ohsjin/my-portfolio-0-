@@ -1,0 +1,119 @@
+/* 기본 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  position: relative;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.background {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('your-image.jpg') center/cover no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.header-content {
+  position: relative;
+  z-index: 10;
+}
+
+.header-content h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.header-content p {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #ccc;
+}
+
+.header-content a {
+  padding: 10px 20px;
+  background-color: #1DB954;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+/* 버튼을 화면 오른쪽 상단에 고정 */
+#modeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  padding: 10px 20px;
+  background-color: #1DB954;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+#modeToggle:hover {
+  background-color: #17a74a;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1DB954;
+  display: inline-block;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #1a1a1a;
+  color: #888;
+}
+
+/* 라이트 모드 스타일 */
+body.light-mode {
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+body.light-mode header {
+  background-color: #eaeaea;
+}
+
+body.light-mode .header-content p,
+body.light-mode a {
+  color: #222;
+}
+
+body.light-mode footer {
+  background-color: #ccc;
+  color: #333;
+}
