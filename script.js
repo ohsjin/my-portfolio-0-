@@ -1,23 +1,16 @@
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+document.addEventListener('DOMContentLoaded', function () {
+  const modeToggle = document.getElementById('modeToggle');
+  modeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    modeToggle.textContent = isDark ? '☀️' : '🌙';
   });
-});
 
-const toggleBtn = document.getElementById('modeToggle');
-
-// 버튼 클릭 시 아이콘만 변경
-
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-
-  if (document.body.classList.contains('light-mode')) {
-    toggleBtn.textContent = '🌞';
-  } else {
-    toggleBtn.textContent = '🌗';
-  }
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
 });

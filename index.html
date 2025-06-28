@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>오세진 - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-  <button id="modeToggle">🌗</button>
-  <header>
-    <div class="background"></div>
-    <div class="header-content">
-      <h1>I'm Oh Sejin</h1>
-      <p>Web Developer & Creative Student</p>
-      <a href="#about">About Me</a>
+  <nav class="nav">
+    <div class="logo">SEJIN's</div>
+    <div class="nav-menu">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Project</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </div>
-  </header>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>안녕하세요, 저는 안양공업고등학교에 재학 중인 오세진입니다. HTML, CSS, JavaScript를 중심으로 웹 개발을 공부하고 있으며, 창의적인 프로젝트와 사용자 중심의 UI/UX에 관심이 많습니다.</p>
-  </section>
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>여기에 여러분의 프로젝트들을 추가할 수 있습니다. 예: 넷플릭스 클론, 네이버 클론 등</p>
-  </section>
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>연락처: 010-2423-6697</p>
-    <p>이메일: os160960@gmail.com</p>
-  </section>
+  </nav>
+
+  <main class="main-section" id="home">
+    <div class="image-side">
+      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80" alt="배경 이미지" />
+    </div>
+    <div class="text-side">
+      <h1>OH SEJIN</h1>
+      <p>Creative <strong>Web Developer</strong></p>
+      <a href="#projects" class="go-btn">Go Project</a>
+    </div>
+  </main>
+
   <footer>
-    &copy; 2025 Oh Sejin. All rights reserved.
+    <p>&copy; 2025 Oh Sejin. All rights reserved.</p>
   </footer>
+
+  <button id="modeToggle" title="Toggle Dark Mode">🌙</button>
+
   <script src="script.js"></script>
 </body>
 </html>
